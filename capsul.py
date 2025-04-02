@@ -2,6 +2,7 @@ import getpass
 from datetime import date, datetime
 import pandas as pd
 import os
+import numpy as np
 
 
 def log(func):
