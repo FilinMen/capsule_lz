@@ -15,7 +15,7 @@ ax2 = ax1.twinx()
 
 
 
-ax2.barh(y_pos_hist, performance, alpha=0.2)
+ax2.barh(y_pos_hist, performance, )
 #alpha = 0.2 is what changes the opacity of the bars
 
 plt.yticks(y_pos_hist, people)
