@@ -1,4 +1,4 @@
-import capsul as ca
+import capsul1 as ca
 
 
 def main():
