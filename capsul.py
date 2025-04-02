@@ -9,11 +9,7 @@ from log import log
 class Weather:
 
     @log
-    def __init__(self):
-        self
-
     def day(self):
-
         df = pd.read_csv('heavy.csv', usecols= ['MONTH','BASEL_sunshine'])
         names = ['January','February','March','April','May','June','July','August','September','October','November','December']
 
@@ -42,10 +38,6 @@ class Weather:
         # Plot formatting
         plt.legend()
         plt.show()
-
-    def __del__(self): #деструктор
-        print("del done")
-
 
 def main(): 
 
