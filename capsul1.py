@@ -16,18 +16,18 @@ class Weather:
         for i in range(1,len(names)+1):
             df['MONTH'] = df['MONTH'].replace(i, names[i-1]) # Замена числовых месяцев на названия
         
-        df.loc[df['MONTH'] == 'January', 'BASEL_sunshine'] /= 31
-        df.loc[df['MONTH'] == 'February', 'BASEL_sunshine'] /= 28,3
-        df.loc[df['MONTH'] == 'March', 'BASEL_sunshine'] /= 31
-        df.loc[df['MONTH'] == 'April', 'BASEL_sunshine'] /= 30
-        df.loc[df['MONTH'] == 'May', 'BASEL_sunshine'] /= 31
-        df.loc[df['MONTH'] == 'June', 'BASEL_sunshine'] /= 30
-        df.loc[df['MONTH'] == 'July', 'BASEL_sunshine'] /= 31
-        df.loc[df['MONTH'] == 'August', 'BASEL_sunshine'] /= 31
-        df.loc[df['MONTH'] == 'September', 'BASEL_sunshine'] /= 30
-        df.loc[df['MONTH'] == 'October', 'BASEL_sunshine'] /= 31
-        df.loc[df['MONTH'] == 'November', 'BASEL_sunshine'] /= 31
-        df.loc[df['MONTH'] == 'December', 'BASEL_sunshine'] /= 31
+        df.loc[df['MONTH'] == 'January', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'February', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'March', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'April', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'May', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'June', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'July', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'August', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'September', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'October', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'November', 'BASEL_sunshine'] /= 240
+        df.loc[df['MONTH'] == 'December', 'BASEL_sunshine'] /= 240
 
         df = df.groupby('MONTH')['BASEL_sunshine'].sum()
         print(df)
